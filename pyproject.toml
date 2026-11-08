@@ -5,3 +5,9 @@ description = "Analyzing Estonians' reading habits"
 readme = "README.md"
 requires-python = ">=3.15"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.4",
+    "ty>=0.0.99",
+]
