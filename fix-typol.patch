@@ -1,5 +1,5 @@
---- .venv/lib/python3.15/site-packages/typol/frame.py.orig	2026-11-20 17:49:05.165170515 +0200
-+++ .venv/lib/python3.15/site-packages/typol/frame.py	2026-11-20 17:49:26.459353794 +0200
+--- .venv/lib/python3.14/site-packages/typol/frame.py.orig	2026-11-20 17:49:05.165170515 +0200
++++ .venv/lib/python3.14/site-packages/typol/frame.py	2026-11-20 17:49:26.459353794 +0200
 @@ -24,7 +24,6 @@
  
  import more_itertools

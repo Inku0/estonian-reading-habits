@@ -6,7 +6,7 @@ I recommend using `uv sync` to first install the dependencies, then use `uv run 
 Due to a recent major update to `polars`, `typol` does not work without a tiny patch, which is included in the file named `fix-typol.patch`.
 To apply this patch, use `patch -p0 < fix-typol.patch`. 
 
-NB! The patch is intended for Python 3.15 and will fail for other versions, though it can easily be updated.
+NB! The patch is intended for Python 3.14 and will fail for other versions, though it can easily be updated.
 
 ## Dataset information
 ### Dataset name

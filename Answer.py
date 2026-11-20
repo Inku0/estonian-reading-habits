@@ -15,7 +15,16 @@ class Gender(Enum):
     Female = 2
     PreferNotToSay = 3
 
-class Answer(tp.Shape):
+class HowManyBooksReadInTheLastSixMonths(Enum):
+    Zero = 1
+    OneToTwo = 2
+    ThreeToFour = 3
+    FiveToSix = 4
+    SixToTen = 5
+    TenToTwenty = 6
+    MoreThanTwenty = 7
+
+class AnswerIntersection(tp.Shape):
     INTNR = tp.dimension(int)  # Interview Number
     ID = tp.dimension(int)
     weight = tp.dimension(float)  # TODO what does this represent?
@@ -210,7 +219,6 @@ class Answer(tp.Shape):
     Q10_1_28 = tp.dimension(int)
     Q10_1_29 = tp.dimension(int)
     Q10_1_30 = tp.dimension(int)
-    Q11_1 = tp.dimension(int)
     Q11a_1 = tp.dimension(int)
     Q12_1 = tp.dimension(int)
     V572_1 = tp.dimension(int)
@@ -786,3 +794,9 @@ class Answer(tp.Shape):
     T22_7 = tp.dimension(int)
     T22_8 = tp.dimension(int)
     T22_9 = tp.dimension(int)
+
+class Answer(AnswerIntersection):
+    Q11_1 = tp.dimension(HowManyBooksReadInTheLastSixMonths)
+
+class AnswerWithoutQ11(Answer):
+    pass
