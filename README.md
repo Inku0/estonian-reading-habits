@@ -1,21 +1,30 @@
 # Analyzing Estonians' reading habits
 
-## Dataset name
+## How to run
+I recommend using `uv sync` to first install the dependencies, then use `uv run main.py`.
+
+Due to a recent major update to `polars`, `typol` does not work without a tiny patch, which is included in the file named `fix-typol.patch`.
+To apply this patch, use `patch -p0 < fix-typol.patch`. 
+
+NB! The patch is intended for Python 3.15 and will fail for other versions, though it can easily be updated.
+
+## Dataset information
+### Dataset name
 Eestlane loeb: raamatuaasta lugemisuuring 2025
 
-## Dataset description
+### Dataset description
 General trends and changes in Estonians' book consumption and reading interests, to examine the diversity of reading interests and preferences, and to explain the social and cultural factors that promote or diminish interest in books.
 
-## Dataset methodology
+### Dataset methodology
 Web-based questionnaire, focus group interviews
 
-## Files in the dataset
+### Files in the dataset
 - Lugeja25.tab
   - Tab-separated results from the study, each line is a person's answers.
 - Datamap_Lugeja25.xlsm
   - Explanations about the variables and how to read the results
 
-## Dataset authors
+### Dataset authors
 - Marge Allandi - Eesti Rahvusraamatukogu
 - Jaanika Anderson - Tartu Ülikooli raamatukogu
 - Kaisa Esko - Kantar Emor
