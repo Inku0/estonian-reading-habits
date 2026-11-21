@@ -800,3 +800,6 @@ class Answer(AnswerIntersection):
 
 class AnswerWithoutQ11(Answer):
     pass
+
+class AnswerQ11NullsAsOnes(Answer):
+    pass
