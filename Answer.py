@@ -24,10 +24,14 @@ class HowManyBooksReadInTheLastSixMonths(Enum):
     TenToTwenty = 6
     MoreThanTwenty = 7
 
-class AnswerIntersection(tp.Shape):
-    INTNR = tp.dimension(int)  # Interview Number
-    ID = tp.dimension(int)
-    weight = tp.dimension(float)  # TODO what does this represent?
+class BinaryYesOrNo(Enum):
+    No = 0
+    Yes = 1
+    
+class AnswerParts1_6(tp.Shape):
+    #INTNR = tp.dimension(int)  # Interview Number
+    #ID = tp.dimension(int)
+    #weight = tp.dimension(float)  # TODO what does this represent?
     T2 = tp.dimension(int) # age in years
     Vanus5 = tp.dimension(AgeRanges)
     Sugu = tp.dimension(Gender)
@@ -188,7 +192,59 @@ class AnswerIntersection(tp.Shape):
     Q6_14 = tp.dimension(int)
     Q6a = tp.dimension(int)
     Q7 = tp.dimension(int)
-    Q9_1 = tp.dimension(int)
+    Q60_1 = tp.dimension(int)  # part 6 begins
+    Q61_1 = tp.dimension(int)
+    Q62_1 = tp.dimension(int)
+    Q63_1 = tp.dimension(int)
+    Q64_1 = tp.dimension(int)
+    Q65_1 = tp.dimension(int)
+    Q66_1 = tp.dimension(int)
+    Q67_1 = tp.dimension(int)
+    Q68_1 = tp.dimension(int)
+    Q69_1 = tp.dimension(int)
+    Q70_1 = tp.dimension(int)
+    Q70_2 = tp.dimension(int)
+    Q70_3 = tp.dimension(int)
+    Q70_4 = tp.dimension(int)
+    Q70_5 = tp.dimension(int)
+    Q70_6 = tp.dimension(int)
+    Q70_7 = tp.dimension(int)
+    Q70_8 = tp.dimension(int)
+    Q70_9 = tp.dimension(int)
+    Q70_10 = tp.dimension(int)
+    Q71_1 = tp.dimension(int)
+    T15_1 = tp.dimension(int)
+    Q72 = tp.dimension(int)
+    T13a_1 = tp.dimension(int)
+    T13a_2 = tp.dimension(int)
+    T13a_3 = tp.dimension(int)
+    T13a_4 = tp.dimension(int)
+    T13a_5 = tp.dimension(int)
+    T13a_6 = tp.dimension(int)
+    T13a_7 = tp.dimension(int)
+    T13a_8 = tp.dimension(int)
+    T13a_9 = tp.dimension(int)
+    T14 = tp.dimension(int)
+    T16 = tp.dimension(int)
+    T17 = tp.dimension(int)
+    T18 = tp.dimension(int)
+    T19 = tp.dimension(int)
+    T20 = tp.dimension(int)
+    T21_1 = tp.dimension(int)
+    T21_2 = tp.dimension(int)
+    T21_3 = tp.dimension(int)
+    T22_1 = tp.dimension(int)
+    T22_2 = tp.dimension(int)
+    T22_3 = tp.dimension(int)
+    T22_4 = tp.dimension(int)
+    T22_5 = tp.dimension(int)
+    T22_6 = tp.dimension(int)
+    T22_7 = tp.dimension(int)
+    T22_8 = tp.dimension(int)
+    T22_9 = tp.dimension(int)
+
+class AnswerIntersection(AnswerParts1_6):
+    Q9_1 = tp.dimension(int) # part 2 begins
     Q10_1_1 = tp.dimension(int)
     Q10_1_2 = tp.dimension(int)
     Q10_1_3 = tp.dimension(int)
@@ -743,57 +799,7 @@ class AnswerIntersection(tp.Shape):
     Q56_1 = tp.dimension(int)
     Q57_1_6 = tp.dimension(int)
     Q58_1 = tp.dimension(int)
-    Q59_1_6 = tp.dimension(int)
-    Q60_1 = tp.dimension(int)
-    Q61_1 = tp.dimension(int)
-    Q62_1 = tp.dimension(int)
-    Q63_1 = tp.dimension(int)
-    Q64_1 = tp.dimension(int)
-    Q65_1 = tp.dimension(int)
-    Q66_1 = tp.dimension(int)
-    Q67_1 = tp.dimension(int)
-    Q68_1 = tp.dimension(int)
-    Q69_1 = tp.dimension(int)
-    Q70_1 = tp.dimension(int)
-    Q70_2 = tp.dimension(int)
-    Q70_3 = tp.dimension(int)
-    Q70_4 = tp.dimension(int)
-    Q70_5 = tp.dimension(int)
-    Q70_6 = tp.dimension(int)
-    Q70_7 = tp.dimension(int)
-    Q70_8 = tp.dimension(int)
-    Q70_9 = tp.dimension(int)
-    Q70_10 = tp.dimension(int)
-    Q71_1 = tp.dimension(int)
-    T15_1 = tp.dimension(int)
-    Q72 = tp.dimension(int)
-    T13a_1 = tp.dimension(int)
-    T13a_2 = tp.dimension(int)
-    T13a_3 = tp.dimension(int)
-    T13a_4 = tp.dimension(int)
-    T13a_5 = tp.dimension(int)
-    T13a_6 = tp.dimension(int)
-    T13a_7 = tp.dimension(int)
-    T13a_8 = tp.dimension(int)
-    T13a_9 = tp.dimension(int)
-    T14 = tp.dimension(int)
-    T16 = tp.dimension(int)
-    T17 = tp.dimension(int)
-    T18 = tp.dimension(int)
-    T19 = tp.dimension(int)
-    T20 = tp.dimension(int)
-    T21_1 = tp.dimension(int)
-    T21_2 = tp.dimension(int)
-    T21_3 = tp.dimension(int)
-    T22_1 = tp.dimension(int)
-    T22_2 = tp.dimension(int)
-    T22_3 = tp.dimension(int)
-    T22_4 = tp.dimension(int)
-    T22_5 = tp.dimension(int)
-    T22_6 = tp.dimension(int)
-    T22_7 = tp.dimension(int)
-    T22_8 = tp.dimension(int)
-    T22_9 = tp.dimension(int)
+    Q59_1_6 = tp.dimension(int) # part 5 ends
 
 class Answer(AnswerIntersection):
     Q11_1 = tp.dimension(HowManyBooksReadInTheLastSixMonths)
@@ -803,3 +809,14 @@ class AnswerWithoutQ11(Answer):
 
 class AnswerQ11NullsAsOnes(Answer):
     pass
+
+class AnswerWithPredictedAndActualQ11(tp.Shape):
+    Predicted = tp.dimension(HowManyBooksReadInTheLastSixMonths)
+    Actual = tp.dimension(HowManyBooksReadInTheLastSixMonths)
+
+class AnswerWithPredictedAndActualQ1(tp.Shape):
+    Predicted = tp.dimension(BinaryYesOrNo)
+    Actual = tp.dimension(BinaryYesOrNo)
+
+class AnswerWithOnlyQ11(tp.Shape):
+    Q11_1 = tp.dimension(HowManyBooksReadInTheLastSixMonths)
