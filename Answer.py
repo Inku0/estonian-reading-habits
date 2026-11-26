@@ -28,7 +28,7 @@ class BinaryYesOrNo(Enum):
     No = 0
     Yes = 1
     
-class AnswerParts1_6(tp.Shape):
+class AnswerParts1_6_NoQ1(tp.Shape):
     #INTNR = tp.dimension(int)  # Interview Number
     #ID = tp.dimension(int)
     #weight = tp.dimension(float)  # TODO what does this represent?
@@ -91,7 +91,6 @@ class AnswerParts1_6(tp.Shape):
     T12_22 = tp.dimension(int)
     T12_23 = tp.dimension(int)
     T12_24 = tp.dimension(int)
-    Q1 = tp.dimension(int)
     V445 = tp.dimension(int)
     Q2 = tp.dimension(int)
     Q3a_1 = tp.dimension(int)
@@ -243,7 +242,10 @@ class AnswerParts1_6(tp.Shape):
     T22_8 = tp.dimension(int)
     T22_9 = tp.dimension(int)
 
-class AnswerIntersection(AnswerParts1_6):
+class AnswerParts1_6(AnswerParts1_6_NoQ1):
+    Q1 = tp.dimension(int) # do you consider yourself to be a reader?
+
+class AnswerParts1_2_3_4_5_6_NotQ11(AnswerParts1_6):
     Q9_1 = tp.dimension(int) # part 2 begins
     Q10_1_1 = tp.dimension(int)
     Q10_1_2 = tp.dimension(int)
@@ -801,22 +803,19 @@ class AnswerIntersection(AnswerParts1_6):
     Q58_1 = tp.dimension(int)
     Q59_1_6 = tp.dimension(int) # part 5 ends
 
-class Answer(AnswerIntersection):
+class Answer(AnswerParts1_2_3_4_5_6_NotQ11):
     Q11_1 = tp.dimension(HowManyBooksReadInTheLastSixMonths)
-
-class AnswerWithoutQ11(Answer):
-    pass
 
 class AnswerQ11NullsAsOnes(Answer):
     pass
 
-class AnswerWithPredictedAndActualQ11(tp.Shape):
+class PredictedAndActualQ11(tp.Shape):
     Predicted = tp.dimension(HowManyBooksReadInTheLastSixMonths)
     Actual = tp.dimension(HowManyBooksReadInTheLastSixMonths)
 
-class AnswerWithPredictedAndActualQ1(tp.Shape):
+class PredictedAndActualQ1(tp.Shape):
     Predicted = tp.dimension(BinaryYesOrNo)
     Actual = tp.dimension(BinaryYesOrNo)
 
-class AnswerWithOnlyQ11(tp.Shape):
+class OnlyQ11(tp.Shape):
     Q11_1 = tp.dimension(HowManyBooksReadInTheLastSixMonths)
