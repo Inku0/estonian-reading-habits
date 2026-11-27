@@ -28,7 +28,7 @@ class BinaryYesOrNo(Enum):
     No = 0
     Yes = 1
     
-class AnswerParts1_6_NoQ1_V445(tp.Shape):
+class AnswerParts1_6_NoQ1_V445_Q3a15_Q3a14(tp.Shape):
     #INTNR = tp.dimension(int)  # Interview Number
     #ID = tp.dimension(int)
     #weight = tp.dimension(float)  # TODO what does this represent?
@@ -105,8 +105,6 @@ class AnswerParts1_6_NoQ1_V445(tp.Shape):
     Q3a_11 = tp.dimension(int)
     Q3a_12 = tp.dimension(int)
     Q3a_13 = tp.dimension(int)
-    Q3a_14 = tp.dimension(int)
-    Q3a_15 = tp.dimension(int)
     Q3a_16 = tp.dimension(int)
     Q3b_1 = tp.dimension(int)
     Q3b_2 = tp.dimension(int)
@@ -240,11 +238,13 @@ class AnswerParts1_6_NoQ1_V445(tp.Shape):
     T22_8 = tp.dimension(int)
     T22_9 = tp.dimension(int)
 
-class AnswerParts1_6WithQ1_V445(AnswerParts1_6_NoQ1_V445):
+class AnswerParts1_6WithQ1_V445_Q3a15_Q3a14(AnswerParts1_6_NoQ1_V445_Q3a15_Q3a14):
     V445 = tp.dimension(int) # filter present in the data for Q1 binary classification
     Q1 = tp.dimension(int) # do you consider yourself to be a reader?
+    Q3a_14 = tp.dimension(int) # in my free time i read non-fiction books about my interests
+    Q3a_15 = tp.dimension(int) # in my free time i read fictional books, poetry, etc.
 
-class AnswerParts1_2_3_4_5_6_NotQ11(AnswerParts1_6WithQ1_V445):
+class AnswerParts1_2_3_4_5_6_NotQ11(AnswerParts1_6WithQ1_V445_Q3a15_Q3a14):
     Q9_1 = tp.dimension(int) # part 2 begins
     Q10_1_1 = tp.dimension(int)
     Q10_1_2 = tp.dimension(int)
