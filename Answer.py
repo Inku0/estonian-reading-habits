@@ -803,10 +803,10 @@ class AnswerParts1_2_3_4_5_6_NotQ11(AnswerParts1_6WithQ1_V445_Q3a15_Q3a14):
     Q59_1_6 = tp.dimension(int)
     Q60_1 = tp.dimension(int) # part 5 ends
 
-class Answer(AnswerParts1_2_3_4_5_6_NotQ11):
+class CompleteAnswer(AnswerParts1_2_3_4_5_6_NotQ11):
     Q11_1 = tp.dimension(HowManyBooksReadInTheLastSixMonths)
 
-class AnswerQ11NullsAsOnes(Answer):
+class CompleteAnswerQ11NullsAsOnes(CompleteAnswer):
     pass
 
 class PredictedAndActualQ11(tp.Shape):
