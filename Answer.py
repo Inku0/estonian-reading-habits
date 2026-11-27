@@ -819,3 +819,7 @@ class PredictedAndActualQ1(tp.Shape):
 
 class OnlyQ11(tp.Shape):
     Q11_1 = tp.dimension(HowManyBooksReadInTheLastSixMonths)
+    
+class FeatureImportance(tp.Shape):
+    Feature_Id = tp.dimension(str)
+    Importances = tp.dimension(float)
