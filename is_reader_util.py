@@ -49,8 +49,6 @@ def split_data_for_parts_1_6(
     return (X_train, X_test, y_train, y_test)
 
 def train_predict_is_reader_parts_1_6(X_train: tp.DataFrame[AnswerParts1_6_NoQ1_V445_Q3a15_Q3a14], y_train: tp.Series[BinaryYesOrNo]) -> CatBoostClassifier:
-    # we're trying to predict the enum HowManyBooksReadInTheLastSixMonths aka Question 11
-
     # we need to predict whether a person considers themself a reader.
     # we can only predict this based on the answers they give in parts 1 and 6,
     # because they're the only parts that non-readers and readers both fill in
